@@ -1,2 +1,2 @@
-# The-Lost-Tale-Of-The-Great-Chemistry-Project
+# The Lost Tale of the Great Chemistry Project
 Interactive Question/Answer Chemistry Project written in Python.
