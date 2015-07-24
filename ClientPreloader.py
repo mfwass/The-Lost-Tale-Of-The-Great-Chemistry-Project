@@ -5,5 +5,5 @@ import ClientLocalizerEnglish
 windowtitle = "The Lost Tale of the Great Chemistry Project"
 loadPrcFileData("", "window-title %s" % windowtitle)
 loadPrcFileData("", "default-directnotify-level info")
-print ":ClientPreloader: Window title set to string value '%s'" % windowtitle
-print ":ClientPreloader: Game Version: %s" % ClientLocalizerEnglish.GameVersion
+print(":ClientPreloader: Window title set to string value '%s'" % windowtitle)
+print(":ClientPreloader: Game Version: %s" % ClientLocalizerEnglish.GameVersion)
