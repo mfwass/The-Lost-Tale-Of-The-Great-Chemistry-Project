@@ -13,14 +13,14 @@ class ClientBase(ShowBase):
     CL = ClientLocalizerEnglish
     category = 0
     def __init__(self):
-        ShowBase.__init__(self)
+        ShowBase.__init__(self, windowType=None)
         print "ClientBase: Window successfully created! Creating GUI..."
         self.GUI.setupAssets()
         self.GUI.showMainMenu()
 
     def handleNextQuestion(self, currentQuestion = None, currentAnswer = None):
         # Alrighty, client is ready for the next question... lets log their current questions data.
-        
+
         if base.GUI.finished == 1:
             self.notify.warning("Client tried to obtain a nonexistant question after already finishing its current set!")
             pass
@@ -39,7 +39,7 @@ class ClientBase(ShowBase):
             self.notify.warning("Client did not provide an answer for question %s." % currentQuestion)
         else:
             self.generateNextQuestion()
-    
+
     def generateNextQuestion(self):
         # Choose a random category by choosing a random number which defines a category
         if self.category == 11:
@@ -96,7 +96,6 @@ class ClientBase(ShowBase):
         self.GUI.updateQuestionText(self.categoryText, self.questionText)
         self.GUI.showNewQuestion(self.categoryText, self.questionText)
 
-
     def handleQuestionException(self, question, answer):
         # todo
         print "handleQuestionException called"
@@ -137,7 +136,7 @@ class ClientBase(ShowBase):
         if username is None:
             # oof, no username provided... oh well, the idiot who failed to provide a username *might* loose some info by being overwritten during parsing
             self.noify.warning("Client set their username as None. Loss of data possible...")
-            
+
     def submitNextQuestion(self, category, question):
         #unused function, no need to document it.
         if question not in self.excludedQuestions:

@@ -4,19 +4,19 @@
 
 # Importing a class runs anything before the
 # game window opens.
-print "ClientStart: Starting the game..."
-print "ClientStart: Preloading window..."
+print ":ClientStart: Starting the game..."
+print ":ClientStart: Preloading window..."
 import ClientPreloader
 # Import the base class that opens the game window.
-print "ClientStart: Preloading base class..."
+print ":ClientStart: Preloading base class..."
 import ClientBase
-print "ClientStart: Creating game window..."
+print ":ClientStart: Creating game window..."
 # Open the game window
 ClientBase.ClientBase()
 
 if not base.win:
     raise StandardError("Main window failed to open! Please check your computer graphics.")
-else:
-    print "ClientStart: Game window created successfully!"
+
 print "Game successfully loaded."
-run()
+
+base.run()

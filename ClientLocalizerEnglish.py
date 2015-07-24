@@ -5,7 +5,7 @@
 DirectionsText = "Respond to each question fully, answer exactly what the question is asking.\n When ready to move onto the next question press 'enter'."
 GameVersion = "0.0.1"
 MainMenuDirections = "Please enter a username, then press 'enter'."
-ThankYouText = "Thank you for taking the time to take this test.\nMade by George Mrsich and Michael Wass\n Python 2.7.6 ~ Panda3D 1.9.0\nCopyright (C) ALL RIGHTS RESERVED"
+ThankYouText = "Thank you for taking the time to take this test.\nMade by George Mrsich, Michael Vanyo and Michael Wass\n Python 2.7.6 ~ Panda3D 1.10.0\nCopyright (C) ALL RIGHTS RESERVED"
 POSSIBLECATEGORIES = {
     1:"CHFOUND",
     2:"ACIDSANDBASE",
