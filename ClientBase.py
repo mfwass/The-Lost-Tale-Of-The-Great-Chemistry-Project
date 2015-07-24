@@ -98,7 +98,7 @@ class ClientBase(ShowBase):
             # Write DBID(Database ID) Marker
             f.write("##############################\n Database file for Client %s...\n##############################\n" % self.getUsername())
         # Open the file
-        f = open("database/"+filename, 'w')
+        f = open("database/"+filename, 'a')
         # Write the question
         f.write("Question: %s \n" % question)
         # Write the answer provided
