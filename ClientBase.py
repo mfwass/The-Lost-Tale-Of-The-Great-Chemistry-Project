@@ -26,7 +26,7 @@ class ClientBase(ShowBase):
         # have an answer? good... lets log it.
         self.logAnswer(currentQuestion, currentAnswer)
         # Checking to see if the client responded with an answer.
-        if currentQuestion is not None and currentAnswer is None:
+        if currentQuestion and currentAnswer is None:
             # really? no answer? thanks for nothing... om nom nom, oh wait a second.... Nothing to om nom nom on!
             self.notify.warning("Client did not provide an answer for question %s." % currentQuestion)
         self.generateNextQuestion()
