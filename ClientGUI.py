@@ -6,6 +6,7 @@ import ClientLocalizerEnglish
 class ClientGUI():
     CL = ClientLocalizerEnglish
     finished = 0
+    question = 0
     def __init__(self):
         # This sets up the 'assets' for the GUI of the program
         # It will declare all main GUI variables and prepare them for usage
@@ -59,12 +60,9 @@ class ClientGUI():
         self.directions.setZ(z)
 
     def updateQuestionText(self, category, question):
-        try:
-            if self.question:
-                self.question.hide()
-                self.question.removeNode()
-        except:
-            pass
+        if self.question:
+            self.question.hide()
+            self.question.removeNode()
         showtext = category + "\n" + question
         self.question = OnscreenText(parent = self.questionPanel,
                                      text = question)
